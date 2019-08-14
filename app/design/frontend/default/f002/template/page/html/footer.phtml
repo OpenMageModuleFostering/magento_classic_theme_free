@@ -18,18 +18,18 @@
  * versions in the future. If you wish to customize Magento for your
  * needs please refer to http://www.magentocommerce.com for more information.
  *
- * @category   design_default
- * @package    Mage
- * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
- * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
 <div class="footer-container">
-	<div class="footer">
+    <div class="footer">
 		<div class="footerl">
 			<p class="legality">
 			<?php echo $this->getCopyright() ?> 
-			<!-- This theme is avalable udner Creative Commons License http://creativecommons.org/licenses/by/3.0/    Removing links to is similarly prohibited. --><a href="http://templates-master.com" alt="Magento Theme"> Magento Theme by Templates Master</a>. <!-- Removing links to is similarly prohibited.  -->
+	        <!-- This theme is avalable udner Creative Commons License http://creativecommons.org/licenses/by/3.0/    Removing links to is similarly prohibited. -->Magento Template by <a href="http://templates-master.com" title="Templates master" rel="nofollow">templates-master.com</a><!-- Removing links to is similarly prohibited.  -->
 			</p>
 			 <div class="box mini-newsletter">
 			    <h4><?php echo $this->__('Newsletter Sign-up') ?></h4>
@@ -51,5 +51,5 @@
 		    <?php echo $this->getChildHtml('footer_links') ?>
 		    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('payments')->toHtml();?>
 		</div>
-	</div>
+    </div>
 </div>

@@ -19,10 +19,10 @@
  *
  * @category    design
  * @package     default_default
- * @copyright   Copyright (c) 2009 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
- 
+
 /* IE 6 only */
 * html .validation-advice { height:13px; }
 * html .error-msg,
@@ -34,6 +34,7 @@
 .block li.item,
 .block-poll li,
 .opc li.section { vertical-align:top; }
+* html .window-overlay { background:#ccc; filter:alpha(opacity=50); }
 
 /* Doubled Margin Fixes */
 .product-view .product-img-box .more-views li,
@@ -44,9 +45,6 @@
 #nav li,
 #nav li a { zoom:1; }
 #nav li { vertical-align:top; }
-/* Show Menu */
-#nav li.over ul.shown-sub { left:0; }
-#nav li.over li ul.shown-sub { left:100px; }
 /********** < Navigation styles */
 
 select { margin-bottom:1px; }
@@ -55,10 +53,11 @@ input.checkbox { width:13px; height:13px; }
 button.button { }
 button.button span { position:relative; }
 button.btn-checkout {}
+#opc-review .sp-methods .input-box { float:left; }
 .form-list label { position:relative; z-index:0; }
 .form-list label.required em { position:absolute; top:0; right:-8px; }
 
-table { face-color:expression(runtimeStyle.scrollbarFaceColor = '#fff', cellSpacing = 0); }
+table { scrollbar-face-color:expression(runtimeStyle.scrollbarFaceColor = '#fff', cellSpacing = 0); }
 
 .product-view .product-img-box .zoom.disabled { filter:alpha(opacity=30); }
 
@@ -68,6 +67,8 @@ table { face-color:expression(runtimeStyle.scrollbarFaceColor = '#fff', cellSpac
 
 .product-view .box-tags .product-tags li,
 .footer li { padding:0 4px 0 7px; }
+
+.product-options dd .time-picker select { margin:0; padding:0; }
 
 /* TM BOC */
 * html .header .logo {}
@@ -100,6 +101,7 @@ table { face-color:expression(runtimeStyle.scrollbarFaceColor = '#fff', cellSpac
 .col-main,
 .col2-set,
 .col3-set,
+.col3-layout .product-options-bottom .price-box,
 .col4-set,
 .messages li,
 .search-autocomplete li,
@@ -129,7 +131,10 @@ table { face-color:expression(runtimeStyle.scrollbarFaceColor = '#fff', cellSpac
 .product-collateral,
 .product-view .product-img-box .more-views ul,
 .product-view .box-tags .form-add,
+.product-view .product-shop .short-description,
+.product-view .box-description,
 .product-options .options-list li,
+.product-options,
 .product-options-bottom,
 .truncated,
 .truncated .truncated_full_value,
@@ -153,7 +158,8 @@ table { face-color:expression(runtimeStyle.scrollbarFaceColor = '#fff', cellSpac
 .advanced-search-summary,
 .advanced-search-summary p,
 .gift-messages-form .item,
-.send-friend .form-list li p { zoom:1; }
+.send-friend .form-list li p,
+.centinel .authentication { zoom:1; }
 
 /* Hover Fix */
 iframe.hover-fix { position:absolute; left:-1px; top:-1px; z-index:-1; background:transparent; filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0); }
