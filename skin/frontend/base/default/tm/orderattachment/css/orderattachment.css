@@ -1,0 +1,12 @@
+.orderattachment { margin: 0 0 10px; }
+.orderattachment .validation-advice { padding: 0; background-image: none; min-height: 0; }
+.list-attachments { margin: 10px 0 0; }
+.list-attachments li { padding: 2px 0; }
+.list-attachments li.disabled { opacity: .5; cursor: progress; }
+.list-attachments .filename { display: inline-block; width: 25%; min-width: 150px; word-break: break-all; vertical-align: top; }
+.list-attachments .comment { max-width: 50%; min-width: 200px; vertical-align: top; }
+.list-attachments .btn-remove { cursor: pointer; display: inline-block; vertical-align: top; }
+
+.order-attachments .col-file { width: 25%; max-width: 200px; word-wrap: break-word; }
+.order-attachments .col-comment { width: 75%; }
+.order-attachments .disabled { opacity: .5; cursor: progress; }
