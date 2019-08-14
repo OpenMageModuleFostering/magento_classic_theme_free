@@ -18,22 +18,22 @@
  * versions in the future. If you wish to customize Magento for your
  * needs please refer to http://www.magentocommerce.com for more information.
  *
- * @category   design_default
- * @package    Mage
- * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
- * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2009 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php 
+<?php
 /**
  * Top menu for store
  *
  * @see Mage_Catalog_Block_Navigation
  */
 ?>
-<div class="header-nav-container">
-    <div class="header-nav">
-        <h4 class="no-display"><?php echo $this->__('Category Navigation:') ?></h4>
+
+<div class="header-nav">
+    <div class="nav-container">
         <ul id="nav">
         <li><a href="<?php echo $this->getUrl() ?>"><?php echo $this->__('Home') ?></a></li>
 		<li onmouseover="toggleMenu(this,1)" onmouseout="toggleMenu(this,0)">
@@ -46,6 +46,5 @@
 		</li>
         <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('menu')->toHtml(); ?>
         </ul>
-    </div>
-    <?php echo $this->getChildHtml('topLeftLinks') ?>
+     </div>
 </div>

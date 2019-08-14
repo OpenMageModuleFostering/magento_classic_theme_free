@@ -18,20 +18,18 @@
  * versions in the future. If you wish to customize Magento for your
  * needs please refer to http://www.magentocommerce.com for more information.
  *
- * @category   design_default
- * @package    Mage
- * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
- * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2009 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
 <?php if(isset($poll)) : ?>
-
 <script type="text/javascript">
 //<![CDATA[
     function validatePollAnswerIsSelected()
     {
         var options = $$('input.poll_vote');
-
         for( i in options ) {
             if( options[i].checked == true ) {
                 return true;
@@ -41,28 +39,28 @@
     }
 //]]>
 </script>
-
-<div class="box base-mini mini-poll">
-    <div class="head">
-        <h4><span><?php echo $this->__('Community Poll') ?></span></h4>
+<div class="block block-poll">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Community Poll') ?></span></strong>
     </div>
     <form id="pollForm" action="<?php echo $action ?>" method="post" onsubmit="return validatePollAnswerIsSelected();">
-        <div class="content">
-            <h5><?php echo $poll->getPollTitle(); ?></h5>
+        <div class="block-content">
+            <p class="block-subtitle"><?php echo $this->htmlEscape($poll->getPollTitle()); ?></p>
             <?php if( $poll_answers ): ?>
-                    <table cellspacing="2">
-                        <tbody>
-                            <?php foreach( $poll_answers as $answer ): ?>
-                            <tr>
-                                <td><input type="radio" name="vote" class="poll_vote" id="vote_<?php echo $answer->getId() ?>" value="<?php echo $answer->getAnswerId() ?>" /></td>
-                                <td><label for="vote_<?php echo $answer->getId() ?>"><?php echo $answer->getAnswerTitle() ?></label>&nbsp;</td>
-                            </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
+            <ul id="poll-answers">
+                <?php foreach( $poll_answers as $answer ): ?>
+                <li>
+                    <input type="radio" name="vote" class="radio poll_vote" id="vote_<?php echo $answer->getId() ?>" value="<?php echo $answer->getAnswerId() ?>" />
+                    <span class="label"><label for="vote_<?php echo $answer->getId() ?>"><?php echo $this->htmlEscape($answer->getAnswerTitle()) ?></label></span>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+            <script type="text/javascript">decorateList('poll-answers');</script>
             <?php endif; ?>
-        <div class="actions"><button class="form-button-alt right" type="submit"><span><?php echo $this->__('Vote') ?></span></button></div>
-	</div>
+            <div class="actions">
+                <button type="submit" title="<?php echo $this->__('Vote') ?>" class="button"><span><span><?php echo $this->__('Vote') ?></span></span></button>
+            </div>
+        </div>
     </form>
 </div>
 <?php endif; ?>

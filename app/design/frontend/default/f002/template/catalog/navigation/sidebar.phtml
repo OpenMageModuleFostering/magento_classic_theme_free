@@ -31,9 +31,9 @@
  * @see Mage_Catalog_Block_Navigation
  */
 ?>
-<div class="box base-mini mini-navigation">
-    <div class="head"><h4><?php echo $this->__('Store Catalog') ?></h4></div>
-    <div class="content">
+<div class="block block-navigation">
+    <div class="block-title"><strong><span><?php echo $this->__('Store Catalog') ?></span></strong></div>
+    <div class="block-content">
         <ul id="nav-sidebox">
         <?php foreach ($this->getStoreCategories() as $_category): ?>
             <?php echo $this->drawItem($_category) ?>
