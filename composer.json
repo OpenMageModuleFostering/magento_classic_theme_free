@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/magento_classic_theme_free",
+    "name": "OpenMageModuleFostering\/magento_classic_theme_free",
     "type": "magento-module",
     "license": "Creative-Commons-License-",
     "homepage": "",
     "description": "Magento Classic Free Theme",
     "authors": [
-    {
-        "name": "TemplatesMaster",
-        "email": "support@templates-master.com"
-    }
-],
+        {
+            "name": "TemplatesMaster",
+            "email": "support@templates-master.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
